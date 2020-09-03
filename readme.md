@@ -43,14 +43,14 @@ this specification will fill up.)
 
 ### Doing
 
- [ ] Set up development environment (VS code, github, pipenv, simpy)
+ * [ ] Set up development environment (VS code, github, pipenv, simpy)
 
 ### Product Backlog
 
- [ ] Create a simple simulation with a development team performing analysis, development and test acitivities
- [ ] Explore ways to capture simulation output metrics
- [ ] Distill sample scenarios from [Vacanti2009]
- [ ] ...
+ * [ ] Create a simple simulation with a development team performing analysis, development and test acitivities
+ * [ ] Explore ways to capture simulation output metrics
+ * [ ] Distill sample scenarios from [Vacanti2009]
+ * [ ] ...
 
 ## Background
 
@@ -71,7 +71,7 @@ Copyright (c) 2020 Marijn van der Zee
 
 ## References
 
- [CS50 Final Project Description]: https://cs50.harvard.edu/x/2020/project/
+ [CS50x Final Project Description]: https://cs50.harvard.edu/x/2020/project/
  [When will it be done? Presentation by Daniel Vacanti]: https://vimeo.com/239539858
  [Vacanti2009]: https://leanpub.com/whenwillitbedone
  [SimPy]: https://simpy.readthedocs.io/
