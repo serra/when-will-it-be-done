@@ -37,13 +37,25 @@ this specification will fill up.)
 
 ### Installation
 
+Clone this repository. From your favourite command line interface, 
+navigate to the root of the environment and start a pipenv shell:
+
+```
+pipenv shell
+```
+
+Sim away!
+
 ### How to use
 
 ## Backlogs
 
 ### Doing
 
- * [ ] Set up development environment (VS code, github, pipenv, simpy)
+ * [ ] Set up development environment
+    * [x] VS code
+    * [x] github
+    * [ ] pipenv with simpy
 
 ### Product Backlog
 
@@ -55,7 +67,7 @@ this specification will fill up.)
 ## Background
 
 The idea for this project emerged after watching the [When will it be done? Presentation by Daniel Vacanti].
-In this presentation, he shares results of different work policies by simulating the policies 
+In his presentation, Daniel shares results of different work policies by simulating the policies 
 using a proprietary simulation application. Let's verify these experiments using open source tools!
 
 Daniel has written out his ideas in two books; one of which inspired the name of this application:
