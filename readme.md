@@ -52,10 +52,10 @@ Sim away!
 
 ### Doing
 
- * [ ] Set up development environment
+ * [x] Set up development environment
     * [x] VS code
     * [x] github
-    * [ ] pipenv with simpy
+    * [x] pipenv with simpy
 
 ### Product Backlog
 
