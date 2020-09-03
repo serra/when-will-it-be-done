@@ -42,6 +42,7 @@ navigate to the root of the environment and start a pipenv shell:
 
 ```
 pipenv shell
+python ./examples/01/sprint.py
 ```
 
 Sim away!
@@ -52,10 +53,12 @@ Sim away!
 
 ### Doing
 
- * [x] Set up development environment
-    * [x] VS code
-    * [x] github
-    * [x] pipenv with simpy
+Create a simple simulation to demonstrate we can run a SimPy simulatio.
+
+ * [x] one developer process
+ * [x] no output except for print statements
+ * [x] documenation updated
+
 
 ### Product Backlog
 
