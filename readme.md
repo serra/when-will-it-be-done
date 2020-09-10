@@ -53,19 +53,34 @@ Sim away!
 
 ### Doing
 
-Create a simple simulation to demonstrate we can run a SimPy simulatio.
-
- * [x] one developer process
- * [x] no output except for print statements
- * [x] documenation updated
-
-
 ### Product Backlog
 
- * [ ] Create a simple simulation with a development team performing analysis, development and test acitivities
+ * [ ] Simulate a team with capacity-constrained skills, modelled as resources
+ * [ ] Simulate a Swarming Scrum Team
  * [ ] Explore ways to capture simulation output metrics
+ * [ ] Simulate a siloed Kanban work group
+ * [ ] Collect output metrics from wwibd
+    * cycle time scatterplots
+    * cycle time scatterplots with percentiles
+    * flow efficiency
+    * cycle time histograms
+    * throughput
+    * CFD
+    * start & stop time per work item
+ * [ ] Chapter 11 of [Vacanti2000] is a great description on how to get started wth process improvement; 
+       it serves as a great way for modelling and simulating too.
  * [ ] Distill sample scenarios from [Vacanti2009]
- * [ ] ...
+ * [ ] Make a collection of interesting agile paradigms to confirm or to falsify
+       (cross functional team, T-shaped team members, single piece flow, estimation,
+       release early and often, swarming).
+ * [ ] Simulate the effect of disruptions and various ways to handle them (e.g. expediting)
+ * [ ] Experiment with pull policies (Fifo, , )
+    * Poor policies: ignore blocked items, ignore wip limits, no dod & rework
+    * Good (?) policies: e.g. chapter 10 on system stability
+ * [ ] Use the simulations you developed in a Monte Carlo Simulation
+ * [ ] Plug in your own data into the simulation's distributions
+ * [ ] Visualize a system's stability
+
 
 ## Background
 
@@ -74,7 +89,7 @@ In his presentation, Daniel shares results of different work policies by simulat
 using a proprietary simulation application. Let's verify these experiments using open source tools!
 
 Daniel has written out his ideas in two books; one of which inspired the name of this application:
-_When will it be done?_ [Vacanti2000]
+_When will it be done?_ [Vacanti2000].
 
 ## License
 
