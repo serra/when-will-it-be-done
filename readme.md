@@ -53,9 +53,11 @@ Sim away!
 
 ### Doing
 
+ * [ ] Simulate a team with capacity-constrained skills, modelled as resources
+
 ### Product Backlog
 
- * [ ] Simulate a team with capacity-constrained skills, modelled as resources
+ * [ ] Capture output of a simulation in a CFD
  * [ ] Simulate a Swarming Scrum Team
  * [ ] Explore ways to capture simulation output metrics
  * [ ] Simulate a siloed Kanban work group
