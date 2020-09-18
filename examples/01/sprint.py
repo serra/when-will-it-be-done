@@ -10,7 +10,7 @@ def developer(env):
         print(f"Developing for {duration} days ...")
         yield env.timeout(duration)
         count += 1
-        print(f"Done! ({count})")
+        print(f"Done! ({count} items on day {env.now})")
 
 
 def sample_development_duration():

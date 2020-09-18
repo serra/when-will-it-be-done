@@ -20,34 +20,31 @@ after minutes of coding and simulation.
 This app allows development teams to 
 see the impact of micro-, everyday decisions in terms of whole-playing-field outcomes.
 
-It does it in a way that appeals to developers: 
-
- 1. fork this repo
- 1. modify the models to reflect your team's work policies
- 1. run a simulation
- 1. learn from the simulation's output
+To get started, for this repository and modify a model or create your own.
 
 ## Product Specification
 
-<details>
-(Nothing here yet, deliberatley left blank.
-Once we finish items from our product backlog, 
-this specification will fill up.)
-</details>
+### Prerequisites
+
+Python 3.8, optionally a virtual envronment tool (e.g. [Pipenv]). 
 
 ### Installation
 
-Clone this repository. From your favourite command line interface, 
-navigate to the root of the environment and start a pipenv shell:
+Clone this repository. If you're not using a virtual environment, install the dependencies from [`Pipfile`](./Pipfile).
+
+Verify your installation and stup by running 
 
 ```
-pipenv shell
 python ./examples/01/sprint.py
 ```
 
 Sim away!
 
 ### How to use
+
+ 1. modify the models to reflect your team's (suggested) work policies
+ 1. run a simulation
+ 1. learn from the simulation's output
 
 ## Backlogs
 
@@ -57,8 +54,6 @@ Sim away!
 
 ### Product Backlog
 
- * [ ] Capture output of a simulation in a CFD
- * [ ] Simulate a Swarming Scrum Team
  * [ ] Explore ways to capture simulation output metrics
  * [ ] Simulate a siloed Kanban work group
  * [ ] Collect output metrics from wwibd
@@ -72,6 +67,7 @@ Sim away!
  * [ ] Chapter 11 of [Vacanti2000] is a great description on how to get started wth process improvement; 
        it serves as a great way for modelling and simulating too.
  * [ ] Distill sample scenarios from [Vacanti2009]
+ * [ ] Simulate a Swarming Scrum Team
  * [ ] Make a collection of interesting agile paradigms to confirm or to falsify
        (cross functional team, T-shaped team members, single piece flow, estimation,
        release early and often, swarming).
