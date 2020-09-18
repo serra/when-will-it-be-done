@@ -50,7 +50,7 @@ Sim away!
 
 ### Doing
 
- * [ ] Simulate a team with capacity-constrained skills, modelled as resources
+(refining backlog)
 
 ### Product Backlog
 

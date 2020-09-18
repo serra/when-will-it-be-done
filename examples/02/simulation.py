@@ -1,11 +1,15 @@
 import simpy
 import random
 
-time_stamps = []
+time_stamps = {}
 
 
 def work_item_process(env, team_skills, item_id):
+    # timestamps for this item
     t = []
+    time_stamps[item_id] = t
+
+    # log starting the work
     t.append(env.now)
 
     for activity in ["specify", "build", "verify"]:
@@ -17,8 +21,6 @@ def work_item_process(env, team_skills, item_id):
             yield env.timeout(sample_activity_duration())   # Do work
             # mark time of ending activity
             t.append(env.now)
-
-    time_stamps.append(t)
 
 
 def work_generator(env, team_skills):
@@ -38,12 +40,15 @@ if __name__ == "__main__":
     print("Hello world!")
     random.seed(1)
     env = simpy.Environment()
+
     # the team
     team_skills = {
         "specify": simpy.Resource(env, 2),
         "build": simpy.Resource(env, 2),
         "verify": simpy.Resource(env, 2)
     }
+
     env.process(work_generator(env, team_skills))
     env.run(until=42*42)
+
     print("Simulation done.")
