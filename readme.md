@@ -50,7 +50,7 @@ Sim away!
 ### Doing
 
  * [ ] cycle time scatterplots
-   * [ ] create data frame from raw data (document convention)
+   * [x] create data frame from raw data (document convention)
    * [ ] create plot from data frame
    * [ ] save the plot in an output directory
    * [ ] output is save at the end of a simulation run
