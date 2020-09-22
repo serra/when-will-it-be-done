@@ -34,7 +34,7 @@ If you're not using a virtual environment, install the dependencies from [`Pipfi
 Verify your installation and setup by running 
 
 ```
-python ./examples/01/sprint.py
+python ./examples/01_sprint.py
 ```
 
 Sim away!

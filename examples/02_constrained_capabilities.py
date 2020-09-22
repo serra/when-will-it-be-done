@@ -1,6 +1,18 @@
+"""
+This examples simulates a team with constrained capabilities.
+
+The purpose of this simulation is to:
+
+ * demonstrate the use of constrained resources
+ * demonstrate a simple way to collect data on work items that you could apply in real life too
+ * demonstrate how you could turn the collected data into meaningful charts
+
+"""
+
 import simpy
 import random
 
+activities = ["specify", "build", "verify"]
 time_stamps = {}
 
 
@@ -12,7 +24,7 @@ def work_item_process(env, team_skills, item_id):
     # log starting the work
     t.append(env.now)
 
-    for activity in ["specify", "build", "verify"]:
+    for activity in activities:
         resource = team_skills[activity]
         with resource.request() as req:
             yield req                                       # Wait for access to the capability
@@ -52,3 +64,7 @@ if __name__ == "__main__":
     env.run(until=42*42)
 
     print("Simulation done.")
+
+    #df = metrics.cycle_times(activities, time_stamps)
+
+    # df.to_csv('./cycle_times.csv')

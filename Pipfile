@@ -12,6 +12,7 @@ rope = "*"
 simpy = "*"
 pytest = "*"
 pandas = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.8"
