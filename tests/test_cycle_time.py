@@ -1,4 +1,4 @@
-import metrics
+from wwibd import metrics
 import pandas as pd
 
 
