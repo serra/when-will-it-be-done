@@ -6,21 +6,18 @@
 
 ## Product Vision
 
-Self-organizing development teams have are in control of the way they go about their work.
+Self-organizing development teams are in control of the way they go about their work.
 They are able to connect their way of working
 to the needs of the people with a stake in their work.
 While going about their work, they reflect and improve: there must be a better way!
 
 The when-will-it-be-done app will allow development teams to 
 quickly experiment with different ways to go about their work.
-These experiments will allow teams to assess the effects of new work policies
-*before* they choose to apply them -
-after minutes of coding and simulation.
+These experiments will allow teams to assess the effects of existing or new work policies -
+after a few minutes of coding and simulation.
 
 This app allows development teams to 
 see the impact of micro-, everyday decisions in terms of whole-playing-field outcomes.
-
-To get started, for this repository and modify a model or create your own.
 
 ## Product Specification
 
@@ -30,9 +27,11 @@ Python 3.8, optionally a virtual envronment tool (e.g. [Pipenv]).
 
 ### Installation
 
-Clone this repository. If you're not using a virtual environment, install the dependencies from [`Pipfile`](./Pipfile).
+Clone this repository. 
 
-Verify your installation and stup by running 
+If you're not using a virtual environment, install the dependencies from [`Pipfile`](./Pipfile).
+
+Verify your installation and setup by running 
 
 ```
 python ./examples/01/sprint.py
@@ -50,15 +49,17 @@ Sim away!
 
 ### Doing
 
-(refining backlog)
+ * [ ] cycle time scatterplots
+   * [ ] create data frame from raw data (document convention)
+   * [ ] create plot from data frame
+   * [ ] save the plot in an output directory
+   * [ ] output is save at the end of a simulation run
+   * [ ] code for creating charts is tested and placed in a separate module
 
 ### Product Backlog
 
- * [ ] Explore ways to capture simulation output metrics
- * [ ] Simulate a siloed Kanban work group
+ * [ ] cycle time scatterplots with percentiles
  * [ ] Collect output metrics from wwibd
-    * cycle time scatterplots
-    * cycle time scatterplots with percentiles
     * flow efficiency
     * cycle time histograms
     * throughput
@@ -67,12 +68,13 @@ Sim away!
  * [ ] Chapter 11 of [Vacanti2000] is a great description on how to get started wth process improvement; 
        it serves as a great way for modelling and simulating too.
  * [ ] Distill sample scenarios from [Vacanti2009]
+ * [ ] Simulate a siloed Kanban work group
  * [ ] Simulate a Swarming Scrum Team
  * [ ] Make a collection of interesting agile paradigms to confirm or to falsify
        (cross functional team, T-shaped team members, single piece flow, estimation,
        release early and often, swarming).
  * [ ] Simulate the effect of disruptions and various ways to handle them (e.g. expediting)
- * [ ] Experiment with pull policies (Fifo, , )
+ * [ ] Experiment with pull policies
     * Poor policies: ignore blocked items, ignore wip limits, no dod & rework
     * Good (?) policies: e.g. chapter 10 on system stability
  * [ ] Use the simulations you developed in a Monte Carlo Simulation
