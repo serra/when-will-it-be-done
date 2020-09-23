@@ -11,6 +11,8 @@ The purpose of this simulation is to:
 
 import simpy
 import random
+from wwibd import metrics
+
 
 activities = ["specify", "build", "verify"]
 time_stamps = {}
@@ -65,6 +67,5 @@ if __name__ == "__main__":
 
     print("Simulation done.")
 
-    #df = metrics.cycle_times(activities, time_stamps)
-
-    # df.to_csv('./cycle_times.csv')
+    df = metrics.cycle_times(activities, time_stamps)
+    df.to_csv('./cycle_times.csv')
