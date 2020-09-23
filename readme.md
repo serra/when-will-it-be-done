@@ -53,7 +53,7 @@ Sim away!
    * [x] create data frame from raw data (document convention)
    * [ ] create plot from data frame
    * [ ] save the plot in an output directory
-   * [ ] output is save at the end of a simulation run
+   * [x] output is saved at the end of a simulation run
    * [ ] code for creating charts is tested and placed in a separate module
 
 ### Product Backlog

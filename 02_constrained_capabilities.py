@@ -67,5 +67,6 @@ if __name__ == "__main__":
 
     print("Simulation done.")
 
+    # save cycle times to csv file:
     df = metrics.cycle_times(activities, time_stamps)
-    df.to_csv('./cycle_times.csv')
+    df.to_csv('./output/cycle_times.csv')
