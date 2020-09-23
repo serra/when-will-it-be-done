@@ -34,7 +34,7 @@ If you're not using a virtual environment, install the dependencies from [`Pipfi
 Verify your installation and setup by running 
 
 ```
-python ./examples/01_sprint.py
+python ./01_sprint.py
 ```
 
 Sim away!
@@ -49,16 +49,13 @@ Sim away!
 
 ### Doing
 
- * [x] cycle time scatterplots
-   * [x] create data frame from raw data (document convention)
-   * [x] create plot from data frame
-   * [x] save the plot in an output directory
-   * [x] output is saved at the end of a simulation run
-   * [x] code for creating metrics and plots is tested and placed in a separate module
+ * [ ] cycle time scatterplots with percentiles
+   * [ ] 50th, 85th, and 95th percentile lines are shown in plot
+   * [ ] label with each line
+   * [ ] use a different color for the percentile lines
 
 ### Product Backlog
 
- * [ ] cycle time scatterplots with percentiles
  * [ ] Collect output metrics from wwibd
     * flow efficiency
     * cycle time histograms
