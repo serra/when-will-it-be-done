@@ -49,7 +49,7 @@ Sim away!
 
 ### Doing
 
- * [ ] cycle time histograms
+ * [x] cycle time histograms
 
 ### Product Backlog
 

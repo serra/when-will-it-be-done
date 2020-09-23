@@ -31,22 +31,26 @@ def get_percentile_values(cycle_time_dataframe, percentiles):
     return tuple([cycle_time_dataframe.Cycle_time.quantile(p/100.0) for p in percentiles])
 
 
-def cycle_time_scatter_plot(cycle_time_dataframe, percentiles=(50, 85, 95)):
+def cycle_time_scatter_plot(cycle_time_dataframe, percentiles=(50, 85, 95), ax=None):
     """
     Create a cycle time scatter plot from a cycle time data frame.
     """
-    ax = cycle_time_dataframe.plot(x='Completed', y='Cycle_time', title="Cycle Times",
-                                     kind='scatter', xlabel='Completed Time')
+    axes = cycle_time_dataframe.plot(x='Completed', y='Cycle_time', title="Cycle Times",
+                                     kind='scatter', xlabel='Completed Time', alpha=0.5, ax=ax)
 
     percentile_values = get_percentile_values(
         cycle_time_dataframe, percentiles)
 
     # draw horizontal line on axes
     for i, p in enumerate(percentile_values):
-        ax.axhline(y=p, color='r', ls=':')
-        ax.text(0, p, f'{percentiles[i]}th percentile', color='r')
+        axes.axhline(y=p, color='r', ls=':')
+        axes.text(0, p, f'{percentiles[i]}th percentile', color='r')
 
-    return ax
+    return axes
+
+
+def cycle_time_histogram_plot(cycle_time_dataframe, ax=None):
+    return cycle_time_dataframe['Cycle_time'].plot(kind='hist', ax=ax)
 
 
 def save_plot(axes, filename):

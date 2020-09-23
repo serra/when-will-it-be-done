@@ -12,6 +12,7 @@ The purpose of this simulation is to:
 import simpy
 import random
 from wwibd import metrics
+import matplotlib.pyplot as plt
 
 activities = ["specify", "build", "verify"]
 time_stamps = {}
@@ -71,6 +72,11 @@ if __name__ == "__main__":
     # save cycle times to csv file:
     df.to_csv('./output/02_cycle_times.csv')
 
-    # create and save plot
-    axes = metrics.cycle_time_scatter_plot(df)
-    metrics.save_plot(axes, './output/02_cycle_time_scatter_plot.png')
+    # create cycle time figures
+    cycle_time_figures, (ax1, ax2) = plt.subplots(nrows=2)
+    cycle_time_figures.set_size_inches(8.27, 11.69)  # A4
+
+    ax1 = metrics.cycle_time_scatter_plot(df, ax=ax1)
+    ax2 = metrics.cycle_time_histogram_plot(df, ax=ax2)
+
+    cycle_time_figures.savefig('./output/02_cycle_time_plots.pdf')
