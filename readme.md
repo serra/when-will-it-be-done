@@ -49,16 +49,12 @@ Sim away!
 
 ### Doing
 
- * [x] cycle time scatterplots with percentiles
-   * [x] 50th, 85th, and 95th percentile lines are shown in plot
-   * [x] label with each line
-   * [x] use a different color for the percentile lines
+ * [ ] cycle time histograms
 
 ### Product Backlog
 
  * [ ] Collect output metrics from wwibd
     * flow efficiency
-    * cycle time histograms
     * throughput
     * CFD
     * start & stop time per work item
