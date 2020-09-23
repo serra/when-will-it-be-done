@@ -45,3 +45,22 @@ def test_cycle_times_column_added():
     assert 'Cycle_time' in df.columns
     assert df['Cycle_time']['a user story'] == 1    # 3-2
     assert df['Cycle_time']['a certain bug'] == 4   # 7-3
+
+
+def test_percentiles():
+    timestamps = {}
+    for i in range(1, 101):
+        timestamps[i] = [0, 0, i]
+
+    assert len(timestamps) == 100
+
+    df = metrics.cycle_times(['Build'], timestamps)
+
+    assert df['Cycle_time'][1] == 1
+    assert df['Cycle_time'][100] == 100
+
+    percentile_values = metrics.get_percentile_values(df, (70, 85, 95))
+
+    assert abs(percentile_values[0] - 70.3) < 0.1
+    assert abs(percentile_values[1] - 85.2) < 0.1
+    assert abs(percentile_values[2] - 95.1) < 0.1

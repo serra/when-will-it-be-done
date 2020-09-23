@@ -46,7 +46,7 @@ def work_generator(env, team_skills):
 
 def sample_activity_duration():
     # best sample this from your own data
-    return random.randrange(1, 5)
+    return random.random() * 5.0
 
 
 if __name__ == "__main__":

@@ -49,10 +49,10 @@ Sim away!
 
 ### Doing
 
- * [ ] cycle time scatterplots with percentiles
-   * [ ] 50th, 85th, and 95th percentile lines are shown in plot
-   * [ ] label with each line
-   * [ ] use a different color for the percentile lines
+ * [x] cycle time scatterplots with percentiles
+   * [x] 50th, 85th, and 95th percentile lines are shown in plot
+   * [x] label with each line
+   * [x] use a different color for the percentile lines
 
 ### Product Backlog
 
