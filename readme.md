@@ -49,12 +49,12 @@ Sim away!
 
 ### Doing
 
- * [ ] cycle time scatterplots
+ * [x] cycle time scatterplots
    * [x] create data frame from raw data (document convention)
-   * [ ] create plot from data frame
-   * [ ] save the plot in an output directory
+   * [x] create plot from data frame
+   * [x] save the plot in an output directory
    * [x] output is saved at the end of a simulation run
-   * [ ] code for creating charts is tested and placed in a separate module
+   * [x] code for creating metrics and plots is tested and placed in a separate module
 
 ### Product Backlog
 

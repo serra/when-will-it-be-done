@@ -13,7 +13,6 @@ import simpy
 import random
 from wwibd import metrics
 
-
 activities = ["specify", "build", "verify"]
 time_stamps = {}
 
@@ -67,6 +66,11 @@ if __name__ == "__main__":
 
     print("Simulation done.")
 
-    # save cycle times to csv file:
     df = metrics.cycle_times(activities, time_stamps)
-    df.to_csv('./output/cycle_times.csv')
+
+    # save cycle times to csv file:
+    df.to_csv('./output/02_cycle_times.csv')
+
+    # create and save plot
+    axes = metrics.cycle_time_scatter_plot(df)
+    metrics.save_plot(axes, './output/02_cycle_time_scatter_plot.png')

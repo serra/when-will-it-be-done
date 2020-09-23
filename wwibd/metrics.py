@@ -1,13 +1,13 @@
 import pandas as pd
-import numpy as np
+import matplotlib.pyplot as plt
 
 
 def cycle_times(labels: list, timestamps: dict):
     """
-    Based on timestamp measurements for each workitem, 
+    Based on timestamp measurements for each workitem,
     return a data data frame with cycle times.
 
-    The structure of this data frame helps construction 
+    The structure of this data frame helps construction
     and plotting of other agile metrics.
     """
     columns = ['Arrival']
@@ -22,3 +22,19 @@ def cycle_times(labels: list, timestamps: dict):
     df['Cycle_time'] = df.Completed - df.Started
 
     return df
+
+
+def cycle_time_scatter_plot(cycle_time_dataframe):
+    """
+    Create a cycle time scatter plot from a cycle time data frame.
+    """
+    return cycle_time_dataframe.plot(x='Completed', y='Cycle_time', title="Cycle Times",
+                                     kind='scatter', xlabel='Completed Time').get_figure()
+
+
+def save_plot(axes, filename):
+    """
+    Save an axes to file.
+    """
+    fig = axes.get_figure()
+    fig.savefig(filename)
