@@ -1,0 +1,4 @@
+# This directory is used to store output from simulations and analyses.
+# By keeping it in source control, our example scripts can simply assume it exists, 
+# which makes for clearer examples.
+
