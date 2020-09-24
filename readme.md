@@ -49,14 +49,17 @@ Sim away!
 
 ### Doing
 
- * [x] cycle time histograms
+ * [ ] Cumulative Flow Diagram (CFD)
+   * [ ] Transform the cycle time data into a stream of events.
+   * [ ] Sort events by timestamp.
+   * [ ] Project events into CFD-suitable data structure.
+   * [ ] Plot data structure as cfd -> what type of data does MPL need for cfd?
 
 ### Product Backlog
 
  * [ ] Collect output metrics from wwibd
     * flow efficiency
     * throughput
-    * CFD
     * start & stop time per work item
  * [ ] Chapter 11 of [Vacanti2000] is a great description on how to get started wth process improvement; 
        it serves as a great way for modelling and simulating too.
