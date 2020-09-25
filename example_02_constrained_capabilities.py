@@ -17,6 +17,8 @@ import matplotlib.pyplot as plt
 activities = ["specify", "build", "verify"]
 time_stamps = {}
 
+output_cycle_time_file_name = './output/02_cycle_times.csv'
+
 
 def work_item_process(env, team_skills, item_id):
     # timestamps for this item
@@ -50,7 +52,7 @@ def sample_activity_duration():
     return random.random() * 5.0
 
 
-if __name__ == "__main__":
+def run(create_figures=False, until=42*42):
     print("Hello world!")
     random.seed(1)
     env = simpy.Environment()
@@ -63,20 +65,25 @@ if __name__ == "__main__":
     }
 
     env.process(work_generator(env, team_skills))
-    env.run(until=42*42)
+    env.run(until=until)
 
     print("Simulation done.")
 
     df = metrics.cycle_times(activities, time_stamps)
 
     # save cycle times to csv file:
-    df.to_csv('./output/02_cycle_times.csv')
+    df.to_csv(output_cycle_time_file_name, index=False)
 
-    # create cycle time figures
-    cycle_time_figures, (ax1, ax2) = plt.subplots(nrows=2)
-    cycle_time_figures.set_size_inches(8.27, 11.69)  # A4
+    if create_figures:
+        # create cycle time figures
+        cycle_time_figures, (ax1, ax2) = plt.subplots(nrows=2)
+        cycle_time_figures.set_size_inches(8.27, 11.69)  # A4
 
-    ax1 = metrics.cycle_time_scatter_plot(df, ax=ax1)
-    ax2 = metrics.cycle_time_histogram_plot(df, ax=ax2)
+        ax1 = metrics.cycle_time_scatter_plot(df, ax=ax1)
+        ax2 = metrics.cycle_time_histogram_plot(df, ax=ax2)
 
-    cycle_time_figures.savefig('./output/02_cycle_time_plots.pdf')
+        cycle_time_figures.savefig('./output/02_cycle_time_plots.pdf')
+
+
+if __name__ == "__main__":
+    run()

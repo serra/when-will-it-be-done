@@ -79,9 +79,7 @@ def get_cfd_dataframe(cycle_time_dataframe):
 
     n = len(event_stream) + 1
 
-    # set first to timestamp just before the first observation in the event stream
     t = np.zeros(n)
-    t[0] = event_stream[0] - 1
 
     counts = {'Time': t}
     for c in flow_columns:
@@ -105,5 +103,9 @@ def get_cfd_dataframe(cycle_time_dataframe):
     return pd.DataFrame(counts)
 
 
-def cfd_plot(cfd_dataframe):
+def cfd_plot_from_cfd_dataframe(cfd_dataframe):
     return cfd_dataframe.plot.area(x='Time', stacked=False)
+
+
+def cfd_plot(cycle_time_dataframe):
+    return cfd_plot_from_cfd_dataframe(get_cfd_dataframe(cycle_time_dataframe))
