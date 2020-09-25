@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -59,3 +60,50 @@ def save_plot(axes, filename):
     """
     fig = axes.get_figure()
     fig.savefig(filename)
+
+
+def get_flow_columns(cycle_time_dataframe):
+    return cycle_time_dataframe.columns[1:-3]
+
+
+def get_event_stream(cycle_time_dataframe):
+    flow_columns = get_flow_columns(cycle_time_dataframe)
+    flow_data = cycle_time_dataframe[flow_columns]
+
+    return flow_data.stack().sort_values()
+
+
+def get_cfd_dataframe(cycle_time_dataframe):
+    flow_columns = get_flow_columns(cycle_time_dataframe)
+    event_stream = get_event_stream(cycle_time_dataframe)
+
+    n = len(event_stream) + 1
+
+    # set first to timestamp just before the first observation in the event stream
+    t = np.zeros(n)
+    t[0] = event_stream[0] - 1
+
+    counts = {'Time': t}
+    for c in flow_columns:
+        counts[c] = np.zeros(n)
+
+    for i, evt in enumerate(event_stream.items()):
+        prev = i
+        now = i + 1
+
+        time_stamp = evt[1]
+        flow_event_id = evt[0][1]
+
+        t[now] = time_stamp
+        for c in flow_columns:
+            # copy previous values
+            counts[c][now] = counts[c][prev]
+
+        # increment flow count for this event
+        counts[flow_event_id][i+1] = counts[flow_event_id][i] + 1
+
+    return pd.DataFrame(counts)
+
+
+def cfd_plot(cfd_dataframe):
+    return cfd_dataframe.plot.area(x='Time', stacked=False)

@@ -1,5 +1,6 @@
 from wwibd import metrics
 import pandas as pd
+import numpy as np
 
 
 def test_returns_dataframe_from_labels_and_dictionary():
@@ -63,3 +64,57 @@ def test_percentiles():
     assert abs(percentile_values[0] - 70.3) < 0.1
     assert abs(percentile_values[1] - 85.2) < 0.1
     assert abs(percentile_values[2] - 95.1) < 0.1
+
+
+def test_cycle_time_flow_columns_are_at_known_location():
+    timestamps = {}
+    cycle_times_df = metrics.cycle_times(['Build', 'Verify'], timestamps)
+    cols = metrics.get_flow_columns(cycle_times_df)
+
+    assert len(cols) == 4
+
+    assert cols[0] == 'Build_started'
+    assert cols[3] == 'Verify_completed'
+
+
+def test_retrieve_event_stream_from_cycle_time_dataframe():
+    timestamps = {'a': [1, 2, 3, 5, 7], 'b': [2.5, 5.7, 6.5, 8.8, 9.1]}
+    cycle_times_df = metrics.cycle_times(['Build', 'Verify'], timestamps)
+
+    stream = metrics.get_event_stream(cycle_times_df)
+    assert len(stream) == 8
+    assert stream[0] == 2   # first timestamp for a.build_started
+
+
+def test_cfd_dataframe_has_zeros_first_row():
+    timestamps = {'a': [1, 2, 3, 5, 7], 'b': [2.5, 5.7, 6.5, 8.8, 9.1]}
+    cycle_times_df = metrics.cycle_times(['Build', 'Verify'], timestamps)
+
+    df = metrics.get_cfd_dataframe(cycle_times_df)
+    first_row_with_counts = df.iloc[0, 1:]
+    assert np.all(first_row_with_counts == 0)
+
+
+def test_cfd_dataframe_at_t5():
+    timestamps = {'a': [1, 2, 3, 5, 7], 'b': [2.5, 5.7, 6.5, 8.8, 9.1]}
+    cycle_times_df = metrics.cycle_times(['Build', 'Verify'], timestamps)
+
+    df = metrics.get_cfd_dataframe(cycle_times_df)
+    # at t5, task a has started verify stage, but not yet completed
+    # at t5, task b has not started, so the cunts should be
+    t5_expected_counts = np.array([1, 1, 1, 0])
+    t5_row_with_counts = df.iloc[3, 1:]
+    print(t5_expected_counts)
+    print(t5_row_with_counts)
+    assert (t5_expected_counts == t5_row_with_counts).all()
+
+
+def test_cfd_dataframe_everything_completed_at_t_last():
+    timestamps = {'a': [1, 2, 3, 5, 7], 'b': [2.5, 5.7, 6.5, 8.8, 9.1]}
+    cycle_times_df = metrics.cycle_times(['Build', 'Verify'], timestamps)
+
+    df = metrics.get_cfd_dataframe(cycle_times_df)
+    # at t_last everything is completed and all counts should be two
+    tl_expected_counts = np.array([2, 2, 2, 2])
+    tl_row_with_counts = df.iloc[-1, 1:]
+    assert (tl_expected_counts == tl_row_with_counts).all()
