@@ -41,7 +41,6 @@ def test_started_and_completed_column_added_and_set_to_first_started_timestamp()
 def test_cycle_times_column_added():
     timestamps = {'a user story': [1, 2, 3], 'a certain bug': [2, 3, 7]}
     df = metrics.cycle_times(['Build'], timestamps)
-    df.to_clipboard()
     assert 'Cycle_time' in df.columns
     assert df['Cycle_time']['a user story'] == 1    # 3-2
     assert df['Cycle_time']['a certain bug'] == 4   # 7-3
