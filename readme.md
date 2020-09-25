@@ -49,11 +49,7 @@ Sim away!
 
 ### Doing
 
- * [x] Cumulative Flow Diagram (CFD)
-   * [x] Transform the cycle time data into a stream of events.
-   * [x] Sort events by timestamp.
-   * [x] Project events into CFD-suitable data structure.
-   * [x] Plot data structure as cfd -> what type of data does MPL need for cfd?
+ * [ ] Refactor example two and import the results into a notebook
 
 ### Product Backlog
 
