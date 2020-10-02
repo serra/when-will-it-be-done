@@ -17,3 +17,6 @@ jupyter = "*"
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+test = "python --version"
