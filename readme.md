@@ -49,8 +49,6 @@ Sim away!
 
 ### Doing
 
- * [ ] Set up a build server using Github actions.
-
 ### Product Backlog
 
  * [ ] Record video presentation for CS50 final project.
