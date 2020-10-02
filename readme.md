@@ -49,10 +49,10 @@ Sim away!
 
 ### Doing
 
+ * [ ] Set up a build server using Github actions.
+
 ### Product Backlog
 
- * [ ] Publish on Github.
- * [ ] Set up a build server using Github actions.
  * [ ] Record video presentation for CS50 final project.
  * [ ] Collect output metrics from [Vacanti2009]
     * [ ] flow efficiency
