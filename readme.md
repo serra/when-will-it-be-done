@@ -43,13 +43,11 @@ Sim away!
 
  1. modify the models to reflect your team's (suggested) work policies
  1. run a simulation
- 1. learn from the simulation's output
+ 1. learn from the simulation's output, for instance creating [a Jupyter notebook](./notebook.ipynb) to organize your experiments and results
 
 ## Backlogs
 
 ### Doing
-
- * [ ] Refactor example two and import the results into a notebook
 
 ### Product Backlog
 
