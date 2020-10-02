@@ -51,26 +51,29 @@ Sim away!
 
 ### Product Backlog
 
- * [ ] Collect output metrics from wwibd
-    * flow efficiency
-    * throughput
-    * start & stop time per work item
+ * [ ] Publish on Github.
+ * [ ] Set up a build server using Github actions.
+ * [ ] Record video presentation for CS50 final project.
+ * [ ] Collect output metrics from [Vacanti2009]
+    * [ ] flow efficiency
+    * [ ] throughput
+    * [ ] start & stop time per work item
  * [ ] Chapter 11 of [Vacanti2000] is a great description on how to get started wth process improvement; 
        it serves as a great way for modelling and simulating too.
- * [ ] Distill sample scenarios from [Vacanti2009]
- * [ ] Simulate a siloed Kanban work group
- * [ ] Simulate a Swarming Scrum Team
+       Maybe add some documentation on how to run a simulation experiment.
+ * [ ] Validate example sample scenarios from [Vacanti2009] with our own simulations.
+ * [ ] Simulate a siloed Kanban work group.
+ * [ ] Simulate a Swarming Scrum Team.
  * [ ] Make a collection of interesting agile paradigms to confirm or to falsify
        (cross functional team, T-shaped team members, single piece flow, estimation,
        release early and often, swarming).
- * [ ] Simulate the effect of disruptions and various ways to handle them (e.g. expediting)
+ * [ ] Simulate the effect of disruptions and various ways to handle them (e.g. expediting).
  * [ ] Experiment with pull policies
-    * Poor policies: ignore blocked items, ignore wip limits, no dod & rework
-    * Good (?) policies: e.g. chapter 10 on system stability
- * [ ] Use the simulations you developed in a Monte Carlo Simulation
- * [ ] Plug in your own data into the simulation's distributions
- * [ ] Visualize a system's stability
-
+    * [ ] Poor policies: ignore blocked items, ignore wip limits, no dod & rework
+    * [ ] Good policies: see e.g. chapter 10 [Vacanti2009] from  on system stability
+ * [ ] Use the simulations you developed in a Monte Carlo Simulation.
+ * [ ] Plug in your own data into the simulation's distributions.
+ * [ ] Visualize a system's stability.
 
 ## Background
 
