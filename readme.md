@@ -4,6 +4,10 @@
 >
 > -- [CS50x Final Project Description]
 
+CS50x Final Project by Marijn van der Zee, from Delft, The Netherlands.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Kk9uTPXIttA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Product Vision
 
 Self-organizing development teams are in control of the way they go about their work.
@@ -49,9 +53,16 @@ Sim away!
 
 ### Doing
 
+ * [ ] Record video presentation for CS50 final project.
+
 ### Product Backlog
 
- * [ ] Record video presentation for CS50 final project.
+ * [ ] Simulate the effect of disruptions and various ways to handle them (e.g. expediting).
+ * [ ] Experiment with pull policies
+    * [ ] Poor policies: ignore blocked items, ignore wip limits, no dod & rework
+    * [ ] Good policies: see e.g. chapter 10 [Vacanti2009] from  on system stability
+ * [ ] Use the simulations you developed in a Monte Carlo Simulation.
+ * [ ] Plug in your own data into the simulation's distributions.
  * [ ] Collect output metrics from [Vacanti2009]
     * [ ] flow efficiency
     * [ ] throughput
@@ -65,12 +76,6 @@ Sim away!
  * [ ] Make a collection of interesting agile paradigms to confirm or to falsify
        (cross functional team, T-shaped team members, single piece flow, estimation,
        release early and often, swarming).
- * [ ] Simulate the effect of disruptions and various ways to handle them (e.g. expediting).
- * [ ] Experiment with pull policies
-    * [ ] Poor policies: ignore blocked items, ignore wip limits, no dod & rework
-    * [ ] Good policies: see e.g. chapter 10 [Vacanti2009] from  on system stability
- * [ ] Use the simulations you developed in a Monte Carlo Simulation.
- * [ ] Plug in your own data into the simulation's distributions.
  * [ ] Visualize a system's stability.
 
 ## Background
@@ -97,3 +102,4 @@ Copyright (c) 2020 Marijn van der Zee
  [Vacanti2009]: https://leanpub.com/whenwillitbedone
  [SimPy]: https://simpy.readthedocs.io/
  [License]: ./LICENSE
+ [Pipenv]: https://pypi.org/project/pipenv/
