@@ -6,7 +6,7 @@
 
 CS50x Final Project by Marijn van der Zee, from Delft, The Netherlands.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Kk9uTPXIttA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Introduction to this project on Youtube](https://i9.ytimg.com/vi_webp/PqcTD3Z9UYE/mqdefault.webp?sqp=CMy79_sF&rs=AOn4CLDkzXYoAU_aomQFDGzu2HJ2t6NBiw)](https://youtu.be/PqcTD3Z9UYE)
 
 ## Product Vision
 
