@@ -53,7 +53,7 @@ Sim away!
 
 ### Doing
 
- * [ ] Record video presentation for CS50 final project.
+ * [ ] ...
 
 ### Product Backlog
 
